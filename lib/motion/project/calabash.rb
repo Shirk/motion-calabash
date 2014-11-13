@@ -110,13 +110,6 @@ namespace 'calabash' do
      App.info 'Info', "Run rake calabash:run to try"
 
      system(cmd)
-
-     this_path = File.expand_path(__FILE__)
-     launch_path = File.join(this_path,'..','..','..','..','scripts','launch.rb')
-     launch_path = File.expand_path(launch_path)
-     puts "Copy launch file #{launch_path} to features/support/launch.rb"
-     FileUtils.cp(launch_path,File.join('features','support','launch.rb'))
-
   end
 
 end
